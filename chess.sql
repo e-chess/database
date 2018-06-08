@@ -2,10 +2,10 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Erstellungszeit: 25. Apr 2018 um 23:09
--- Server-Version: 5.6.39
--- PHP-Version: 5.6.33
+-- Host: 127.0.0.1
+-- Erstellungszeit: 08. Jun 2018 um 17:22
+-- Server-Version: 10.1.30-MariaDB
+-- PHP-Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,16 +19,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `103551m79436_1`
+-- Datenbank: `chess`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `turns`
+-- Tabellenstruktur für Tabelle `test`
 --
 
-CREATE TABLE `turns` (
+CREATE TABLE `test` (
   `id` int(5) NOT NULL,
   `source` text NOT NULL,
   `target` text NOT NULL,
@@ -36,20 +36,22 @@ CREATE TABLE `turns` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Daten für Tabelle `turns`
+-- Daten für Tabelle `test`
 --
 
-INSERT INTO `turns` (`id`, `source`, `target`, `curtime`) VALUES
-(1, 'd2', 'd4', '2018-04-22 20:28:52');
+INSERT INTO `test` (`id`, `source`, `target`, `curtime`) VALUES
+(1, 'd2', 'd4', '2018-04-22 20:28:52'),
+(2, 'f2', 'f4', '2018-05-11 15:00:08'),
+(4, 'g1', 'h3', '2018-05-11 15:01:32');
 
 --
 -- Indizes der exportierten Tabellen
 --
 
 --
--- Indizes für die Tabelle `turns`
+-- Indizes für die Tabelle `test`
 --
-ALTER TABLE `turns`
+ALTER TABLE `test`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +59,10 @@ ALTER TABLE `turns`
 --
 
 --
--- AUTO_INCREMENT für Tabelle `turns`
+-- AUTO_INCREMENT für Tabelle `test`
 --
-ALTER TABLE `turns`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `test`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
