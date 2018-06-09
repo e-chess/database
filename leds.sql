@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 09. Jun 2018 um 16:14
+-- Erstellungszeit: 09. Jun 2018 um 23:56
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.2.2
 
@@ -35,6 +35,13 @@ CREATE TABLE `leds` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Daten für Tabelle `leds`
+--
+
+INSERT INTO `leds` (`id`, `fields`, `curtime`) VALUES
+(6, 'd4,f2,h6,e7,a1', '2018-06-09 21:55:19');
+
+--
 -- Indizes der exportierten Tabellen
 --
 
@@ -52,7 +59,7 @@ ALTER TABLE `leds`
 -- AUTO_INCREMENT für Tabelle `leds`
 --
 ALTER TABLE `leds`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
