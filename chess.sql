@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 27. Jun 2018 um 23:51
+-- Erstellungszeit: 28. Jun 2018 um 00:13
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.2.2
 
@@ -31,9 +31,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `boardinput` (
   `id` int(5) NOT NULL,
   `field` text CHARACTER SET utf8 NOT NULL,
-  `millis` int(10) NOT NULL,
+  `status` int(1) NOT NULL,
   `curtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `boardinput`
+--
+
+INSERT INTO `boardinput` (`id`, `field`, `status`, `curtime`) VALUES
+(872, 'd4', 0, '2018-06-27 22:12:26');
 
 -- --------------------------------------------------------
 
@@ -53,7 +60,7 @@ CREATE TABLE `correctmoves` (
 --
 
 INSERT INTO `correctmoves` (`id`, `source`, `target`, `curtime`) VALUES
-(1, 'd2', 'd4', '2018-06-27 17:21:13');
+(9, 'd2', 'd4', '2018-06-27 22:12:26');
 
 -- --------------------------------------------------------
 
@@ -72,7 +79,7 @@ CREATE TABLE `leds` (
 --
 
 INSERT INTO `leds` (`id`, `fields`, `curtime`) VALUES
-(1, '1,2,3,4,64', '2018-06-27 17:21:13');
+(66, '1,2,3,4,64', '2018-06-27 22:12:26');
 
 -- --------------------------------------------------------
 
@@ -170,19 +177,19 @@ ALTER TABLE `test`
 -- AUTO_INCREMENT für Tabelle `boardinput`
 --
 ALTER TABLE `boardinput`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=873;
 
 --
 -- AUTO_INCREMENT für Tabelle `correctmoves`
 --
 ALTER TABLE `correctmoves`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT für Tabelle `leds`
 --
 ALTER TABLE `leds`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT für Tabelle `test`
