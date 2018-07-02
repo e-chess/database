@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 28. Jun 2018 um 00:12
+-- Erstellungszeit: 02. Jul 2018 um 17:54
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.2.2
 
@@ -31,7 +31,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `boardinput` (
   `id` int(5) NOT NULL,
   `field` text CHARACTER SET utf8 NOT NULL,
-  `status` int(1) NOT NULL,
   `curtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,8 +38,8 @@ CREATE TABLE `boardinput` (
 -- Daten für Tabelle `boardinput`
 --
 
-INSERT INTO `boardinput` (`id`, `field`, `status`, `curtime`) VALUES
-(872, 'd4', 0, '2018-06-27 22:12:26');
+INSERT INTO `boardinput` (`id`, `field`, `curtime`) VALUES
+(1, 'd4', '2018-07-02 14:54:36');
 
 --
 -- Indizes der exportierten Tabellen
@@ -60,7 +59,7 @@ ALTER TABLE `boardinput`
 -- AUTO_INCREMENT für Tabelle `boardinput`
 --
 ALTER TABLE `boardinput`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=873;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
