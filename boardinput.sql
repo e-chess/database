@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Jul 2018 um 17:54
+-- Erstellungszeit: 11. Jul 2018 um 16:11
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.2.2
 
@@ -39,7 +39,7 @@ CREATE TABLE `boardinput` (
 --
 
 INSERT INTO `boardinput` (`id`, `field`, `curtime`) VALUES
-(1, 'd4', '2018-07-02 14:54:36');
+(446, 'f6', '2018-07-11 14:04:34');
 
 --
 -- Indizes der exportierten Tabellen
@@ -59,7 +59,7 @@ ALTER TABLE `boardinput`
 -- AUTO_INCREMENT für Tabelle `boardinput`
 --
 ALTER TABLE `boardinput`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=447;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

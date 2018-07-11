@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Jul 2018 um 17:54
+-- Erstellungszeit: 11. Jul 2018 um 16:11
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.2.2
 
@@ -39,7 +39,7 @@ CREATE TABLE `boardinput` (
 --
 
 INSERT INTO `boardinput` (`id`, `field`, `curtime`) VALUES
-(1, 'd4', '2018-07-02 14:54:36');
+(446, 'f6', '2018-07-11 14:04:34');
 
 -- --------------------------------------------------------
 
@@ -59,7 +59,10 @@ CREATE TABLE `correctmoves` (
 --
 
 INSERT INTO `correctmoves` (`id`, `source`, `target`, `curtime`) VALUES
-(1, 'd2', 'd4', '2018-07-02 14:54:36');
+(549, 'g8', 'f6', '2018-07-11 14:04:34'),
+(550, 'g2', 'g4', '2018-07-11 14:04:59'),
+(551, 'e7', 'e6', '2018-07-11 14:05:07'),
+(552, 'b1', 'a3', '2018-07-11 14:05:20');
 
 -- --------------------------------------------------------
 
@@ -78,67 +81,12 @@ CREATE TABLE `leds` (
 --
 
 INSERT INTO `leds` (`id`, `fields`, `curtime`) VALUES
-(1, '1,2,3,4,64', '2018-07-02 14:54:36');
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `test`
---
-
-CREATE TABLE `test` (
-  `id` int(5) NOT NULL,
-  `source` text NOT NULL,
-  `target` text NOT NULL,
-  `curtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Daten für Tabelle `test`
---
-
-INSERT INTO `test` (`id`, `source`, `target`, `curtime`) VALUES
-(1, 'd2', 'd4', '2018-04-22 20:28:52'),
-(2, 'f2', 'f4', '2018-05-11 15:00:08'),
-(4, 'g1', 'h3', '2018-05-11 15:01:32'),
-(89, 'd7', 'd6', '2018-06-09 14:00:41'),
-(88, 'd7', 'd6', '2018-06-09 14:00:39'),
-(87, 'd7', 'd6', '2018-06-09 14:00:38'),
-(86, 'd7', 'd6', '2018-06-09 14:00:36'),
-(85, 'd7', 'd6', '2018-06-09 14:00:35'),
-(84, 'd7', 'd6', '2018-06-09 14:00:34'),
-(83, 'd7', 'd6', '2018-06-09 14:00:32'),
-(82, 'd7', 'd6', '2018-06-09 14:00:31'),
-(107, 'd7', 'd6', '2018-06-09 14:02:34'),
-(106, 'd7', 'd6', '2018-06-09 14:02:33'),
-(105, 'd7', 'd6', '2018-06-09 14:02:31'),
-(104, 'd7', 'd6', '2018-06-09 14:02:30'),
-(103, 'd7', 'd6', '2018-06-09 14:02:29'),
-(102, 'd7', 'd6', '2018-06-09 14:02:27'),
-(101, 'd7', 'd6', '2018-06-09 14:02:26'),
-(100, 'd7', 'd6', '2018-06-09 14:02:25'),
-(99, 'd7', 'd6', '2018-06-09 14:02:23'),
-(98, 'd7', 'd6', '2018-06-09 14:02:22'),
-(97, 'd7', 'd6', '2018-06-09 14:02:21'),
-(96, 'd7', 'd6', '2018-06-09 14:02:20'),
-(95, 'd7', 'd6', '2018-06-09 14:02:19'),
-(94, 'd7', 'd6', '2018-06-09 14:00:48'),
-(93, 'd7', 'd6', '2018-06-09 14:00:46'),
-(92, 'd7', 'd6', '2018-06-09 14:00:45'),
-(91, 'd7', 'd6', '2018-06-09 14:00:43'),
-(90, 'd7', 'd6', '2018-06-09 14:00:42'),
-(81, 'd7', 'd6', '2018-06-09 14:00:29'),
-(80, 'd7', 'd6', '2018-06-09 14:00:28'),
-(79, 'd7', 'd6', '2018-06-09 14:00:27'),
-(78, 'd7', 'd6', '2018-06-09 14:00:25'),
-(77, 'd7', 'd6', '2018-06-09 14:00:24'),
-(76, 'd7', 'd6', '2018-06-09 14:00:22'),
-(75, 'd7', 'd6', '2018-06-09 14:00:21'),
-(74, 'd7', 'd6', '2018-06-09 14:00:20'),
-(73, 'd7', 'd6', '2018-06-09 14:00:18'),
-(72, 'd7', 'd6', '2018-06-09 14:00:17'),
-(71, 'd7', 'd6', '2018-06-09 14:00:15'),
-(70, 'd7', 'd6', '2018-06-09 14:00:14');
+(1476, '<57,58,59>', '2018-07-11 14:05:50'),
+(1477, '<-1>', '2018-07-11 14:05:50'),
+(1478, '<54,53,52>', '2018-07-11 14:05:50'),
+(1479, '<-1>', '2018-07-11 14:05:51'),
+(1480, '<55,58,42>', '2018-07-11 14:05:51'),
+(1481, '<-1>', '2018-07-11 14:05:51');
 
 --
 -- Indizes der exportierten Tabellen
@@ -163,12 +111,6 @@ ALTER TABLE `leds`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `test`
---
-ALTER TABLE `test`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
@@ -176,25 +118,19 @@ ALTER TABLE `test`
 -- AUTO_INCREMENT für Tabelle `boardinput`
 --
 ALTER TABLE `boardinput`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=447;
 
 --
 -- AUTO_INCREMENT für Tabelle `correctmoves`
 --
 ALTER TABLE `correctmoves`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=553;
 
 --
 -- AUTO_INCREMENT für Tabelle `leds`
 --
 ALTER TABLE `leds`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT für Tabelle `test`
---
-ALTER TABLE `test`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1482;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

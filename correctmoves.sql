@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 09. Jun 2018 um 23:55
+-- Erstellungszeit: 11. Jul 2018 um 16:11
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.2.2
 
@@ -40,7 +40,10 @@ CREATE TABLE `correctmoves` (
 --
 
 INSERT INTO `correctmoves` (`id`, `source`, `target`, `curtime`) VALUES
-(1, 'd2', 'd4', '2018-06-09 21:55:19');
+(549, 'g8', 'f6', '2018-07-11 14:04:34'),
+(550, 'g2', 'g4', '2018-07-11 14:04:59'),
+(551, 'e7', 'e6', '2018-07-11 14:05:07'),
+(552, 'b1', 'a3', '2018-07-11 14:05:20');
 
 --
 -- Indizes der exportierten Tabellen
@@ -60,7 +63,7 @@ ALTER TABLE `correctmoves`
 -- AUTO_INCREMENT für Tabelle `correctmoves`
 --
 ALTER TABLE `correctmoves`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=553;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

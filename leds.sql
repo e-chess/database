@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 09. Jun 2018 um 23:56
+-- Erstellungszeit: 11. Jul 2018 um 16:11
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 7.2.2
 
@@ -39,7 +39,12 @@ CREATE TABLE `leds` (
 --
 
 INSERT INTO `leds` (`id`, `fields`, `curtime`) VALUES
-(6, 'd4,f2,h6,e7,a1', '2018-06-09 21:55:19');
+(1476, '<57,58,59>', '2018-07-11 14:05:50'),
+(1477, '<-1>', '2018-07-11 14:05:50'),
+(1478, '<54,53,52>', '2018-07-11 14:05:50'),
+(1479, '<-1>', '2018-07-11 14:05:51'),
+(1480, '<55,58,42>', '2018-07-11 14:05:51'),
+(1481, '<-1>', '2018-07-11 14:05:51');
 
 --
 -- Indizes der exportierten Tabellen
@@ -59,7 +64,7 @@ ALTER TABLE `leds`
 -- AUTO_INCREMENT für Tabelle `leds`
 --
 ALTER TABLE `leds`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1482;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
